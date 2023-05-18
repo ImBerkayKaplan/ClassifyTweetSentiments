@@ -2,7 +2,7 @@ import pandas as pd, numpy as np
 from operator import add, truediv
 from sklearn.model_selection import train_test_split
 
-Tweets=pd.read_csv('tweets.csv')
+Tweets=pd.read_csv('data/tweets.csv')
 SEED = 42
 
 # Create the word dictionary
@@ -115,7 +115,7 @@ FrequencyFeatureVectors = np.zeros(len(FeatureVectors[0]))
 for i in FeatureVectors:
     FrequencyFeatureVectors = np.add(FrequencyFeatureVectors,i)
 SortedList = sorted(list(map(list, zip(FrequencyFeatureVectors, AllWords))),key = lambda x: x[0], reverse = True)
-PerformExperiment(SortedList[25:], Labels, Tweets,"Accuracy when top 25 removed")
-PerformExperiment(SortedList[50:], Labels, Tweets,"Accuracy when top 50 removed")
-PerformExperiment(SortedList[100:], Labels, Tweets,"Accuracy when top 100 removed")
-PerformExperiment(SortedList[200:], Labels, Tweets,"Accuracy when top 200 removed")
+PerformExperiment(SortedList[25:], Labels, Tweets,"The accuracy when the most frequent 25 words are removed")
+PerformExperiment(SortedList[50:], Labels, Tweets,"The accuracy when the most frequent 50 words are removed")
+PerformExperiment(SortedList[100:], Labels, Tweets,"The accuracy when the most frequent 100 words are removed")
+PerformExperiment(SortedList[200:], Labels, Tweets,"The accuracy when the most frequent 200 words are removed")
