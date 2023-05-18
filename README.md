@@ -1,4 +1,4 @@
-# RemoveFrequentWordsFromTweets
+# ClassifyTweetSentiments
 Several techniques exist to classify certain sentences based on specific cues. In this project, Naive Bayes will be used to classify example tweets as negative or positive sentiment. The positive sentiment tweets are indicated with a label of 1, while the negative sentiment tweets are represented with -1 in the ```tweets.csv``` file. In addition, most frequent words from the tweets will be removed to demonstrate the negative effects on the accuracy rate.
 
 ## Setup
